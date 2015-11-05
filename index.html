@@ -20,8 +20,10 @@
 <body ng-app="app">
 	<p>{{ 6*7 }}</p>
 	<div ng-controller="gameController as game">
-		<input type="button" value="Get Random IMDB Number"  ng-click="game.getRandomIMDBnumber()">
-		<p>{{ game.randomIMDBnumber }}</p>
+		<input type="button" value="Get Random Movie"  ng-click="game.getRandomIMDBinfo()">
+		<p>{{ game.randomTitle }}</p>
+		<p>{{ game.randomActors }}</p>
+		<img src="http://media.giphy.com/media/a5viI92PAF89q/giphy.gif" ng-style="game.thinkingGif;">
 	</div>
 </body>
 </html>
