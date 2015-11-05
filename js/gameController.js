@@ -30,20 +30,20 @@
 						console.log(url);
 
 						var metascore = parseInt(data.Metascore);
-						var genre = data.Genre;
-						var genreCheck = false;
-						if(genre){
-							//means actual response
-							console.log('genre found');
+						// var genre = data.Genre;
+						// var genreCheck = false;
+						// if(genre){
+						// 	//means actual response
+						// 	console.log('genre found');
 
-							if(genre.indexOf('Documentary') > -1){
-								genreCheck = true;
-							}
+						// 	if(genre.indexOf('Documentary') > -1){
+						// 		genreCheck = true;
+						// 	}
 
-						}
+						// }
 
 						//If response does not pass filter, run function again
-						if(data.Response == 'False' || data.Metascore == "N/A" || metascore < 30 || data.Language !== "English" || genreCheck){
+						if(data.Response == 'False' || data.Metascore == "N/A" || metascore < 30 || data.Language !== "English"){
 							getRandomIMDBinfo();
 						}
 						else{
