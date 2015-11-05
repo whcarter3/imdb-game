@@ -30,17 +30,17 @@
 						console.log(url);
 
 						var metascore = parseInt(data.Metascore);
-						// var genre = data.Genre;
+						var genre = data.Genre;
 						// var genreCheck = false;
-						// if(genre){
+						if(genre){
 						// 	//means actual response
-						// 	console.log('genre found');
+							console.log('genre found');
 
 						// 	if(genre.indexOf('Documentary') > -1){
 						// 		genreCheck = true;
 						// 	}
 
-						// }
+						}
 
 						//If response does not pass filter, run function again
 						if(data.Response == 'False' || data.Metascore == "N/A" || metascore < 30 || data.Language !== "English"){
